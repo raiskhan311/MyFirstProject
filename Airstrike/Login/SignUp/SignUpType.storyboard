@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m4L-fb-edz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up Type View Controller-->
+        <scene sceneID="sE4-vQ-Go5">
+            <objects>
+                <viewController id="m4L-fb-edz" customClass="SignUpTypeViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H2d-kr-QrP"/>
+                        <viewControllerLayoutGuide type="bottom" id="KWQ-Gb-pZB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZhP-4Y-nVI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVx-QK-Z7E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-fj-ffu">
+                                        <rect key="frame" x="8" y="8" width="58" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="eoE-08-JOP"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="m4L-fb-edz" eventType="touchUpInside" id="xPx-VT-xw8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6SM-fj-ffu" firstAttribute="top" secondItem="JVx-QK-Z7E" secondAttribute="top" constant="8" id="5UJ-kH-Id4"/>
+                                    <constraint firstItem="6SM-fj-ffu" firstAttribute="leading" secondItem="JVx-QK-Z7E" secondAttribute="leading" constant="8" id="CjA-xT-9aW"/>
+                                    <constraint firstAttribute="bottom" secondItem="6SM-fj-ffu" secondAttribute="bottom" constant="8" id="cXM-aG-v3j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nm-ZU-FKY">
+                                <rect key="frame" x="0.0" y="66" width="375" height="188"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNm-t1-TOo">
+                                        <rect key="frame" x="32" y="50" width="311" height="44"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hZI-EY-cMt"/>
+                                        </constraints>
+                                        <state key="normal" title="Player">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playerSignupPressed:" destination="m4L-fb-edz" eventType="touchUpInside" id="HTT-Ms-IXC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tx-CU-l02">
+                                        <rect key="frame" x="32" y="116" width="311" height="44"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Sjp-sS-kuf"/>
+                                        </constraints>
+                                        <state key="normal" title="Non - Player">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nonPlayerSignupPressed:" destination="m4L-fb-edz" eventType="touchUpInside" id="uko-vU-YWb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up as:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-5w-nbp">
+                                        <rect key="frame" x="32" y="8" width="311" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="wZT-fQ-AMw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1tx-CU-l02" firstAttribute="top" secondItem="eNm-t1-TOo" secondAttribute="bottom" constant="22" id="1Df-RW-pYP"/>
+                                    <constraint firstItem="AlS-5w-nbp" firstAttribute="leading" secondItem="0nm-ZU-FKY" secondAttribute="leading" constant="32" id="AoA-NH-0ID"/>
+                                    <constraint firstAttribute="height" constant="188" id="Fwn-bi-Y1s"/>
+                                    <constraint firstItem="eNm-t1-TOo" firstAttribute="leading" secondItem="0nm-ZU-FKY" secondAttribute="leading" constant="32" id="PeT-pM-akv"/>
+                                    <constraint firstAttribute="trailing" secondItem="AlS-5w-nbp" secondAttribute="trailing" constant="32" id="Yeu-tg-kqp"/>
+                                    <constraint firstItem="eNm-t1-TOo" firstAttribute="top" secondItem="AlS-5w-nbp" secondAttribute="bottom" constant="21" id="dC6-1z-HMT"/>
+                                    <constraint firstAttribute="trailing" secondItem="eNm-t1-TOo" secondAttribute="trailing" constant="32" id="fFd-A3-Zq5"/>
+                                    <constraint firstItem="1tx-CU-l02" firstAttribute="trailing" secondItem="eNm-t1-TOo" secondAttribute="trailing" id="imd-5H-J0f"/>
+                                    <constraint firstItem="AlS-5w-nbp" firstAttribute="top" secondItem="0nm-ZU-FKY" secondAttribute="top" constant="8" id="mIN-dA-wbR"/>
+                                    <constraint firstItem="1tx-CU-l02" firstAttribute="leading" secondItem="eNm-t1-TOo" secondAttribute="leading" id="vw5-BW-lmO"/>
+                                    <constraint firstItem="1tx-CU-l02" firstAttribute="centerX" secondItem="0nm-ZU-FKY" secondAttribute="centerX" id="wS5-2h-0Ip"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JVx-QK-Z7E" firstAttribute="leading" secondItem="ZhP-4Y-nVI" secondAttribute="leading" id="dRa-ot-GAf"/>
+                            <constraint firstItem="0nm-ZU-FKY" firstAttribute="leading" secondItem="ZhP-4Y-nVI" secondAttribute="leading" id="gRx-S6-IHG"/>
+                            <constraint firstAttribute="trailing" secondItem="JVx-QK-Z7E" secondAttribute="trailing" id="kdr-aM-4pJ"/>
+                            <constraint firstAttribute="trailing" secondItem="0nm-ZU-FKY" secondAttribute="trailing" id="pbu-IW-wg2"/>
+                            <constraint firstItem="JVx-QK-Z7E" firstAttribute="top" secondItem="H2d-kr-QrP" secondAttribute="bottom" id="pzy-gY-qV4"/>
+                            <constraint firstItem="0nm-ZU-FKY" firstAttribute="top" secondItem="JVx-QK-Z7E" secondAttribute="bottom" id="uNU-nj-s3V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="yvm-kM-x4x" kind="show" identifier="proceedToSignUp" id="WFF-7c-9mE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCb-Sj-d6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="114"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="uBn-mU-zUC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="yvm-kM-x4x" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROj-lN-8rT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="113"/>
+        </scene>
+    </scenes>
+</document>

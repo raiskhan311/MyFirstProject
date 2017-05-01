@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fyZ-nx-8iE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Football View Controller-->
+        <scene sceneID="n02-aW-P58">
+            <objects>
+                <viewController id="fyZ-nx-8iE" customClass="FootballViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y9g-t5-I8T"/>
+                        <viewControllerLayoutGuide type="bottom" id="ti3-C1-8uP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mnD-ZC-rDu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-D4-wHX" customClass="CustomSegmentedControl" customModule="Airstrike" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ecg-Un-cCa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Feed"/>
+                                    <segment title="Scores"/>
+                                    <segment title="Leaderboards"/>
+                                    <segment title="Teams"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sectionSwitcherSegmentedControlValueChanged:" destination="fyZ-nx-8iE" eventType="valueChanged" id="CIg-rG-P34"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrL-nA-IKT">
+                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjW-dF-bey" userLabel="Divider View">
+                                <rect key="frame" x="0.0" y="56" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zRX-2g-ePl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yhn-D4-wHX" firstAttribute="top" secondItem="y9g-t5-I8T" secondAttribute="bottom" constant="4" id="4PC-Dz-3Vc"/>
+                            <constraint firstItem="ti3-C1-8uP" firstAttribute="top" secondItem="vrL-nA-IKT" secondAttribute="bottom" id="TMH-qf-aOm"/>
+                            <constraint firstItem="vrL-nA-IKT" firstAttribute="top" secondItem="yhn-D4-wHX" secondAttribute="bottom" constant="5" id="URS-c0-Fwh"/>
+                            <constraint firstItem="AjW-dF-bey" firstAttribute="top" secondItem="yhn-D4-wHX" secondAttribute="bottom" constant="4" id="XKV-Q7-ymK"/>
+                            <constraint firstItem="yhn-D4-wHX" firstAttribute="leading" secondItem="mnD-ZC-rDu" secondAttribute="leading" id="Zef-TC-Q0d"/>
+                            <constraint firstItem="AjW-dF-bey" firstAttribute="leading" secondItem="mnD-ZC-rDu" secondAttribute="leading" id="dby-g5-y9h"/>
+                            <constraint firstItem="vrL-nA-IKT" firstAttribute="leading" secondItem="mnD-ZC-rDu" secondAttribute="leading" id="eQ0-CD-UV4"/>
+                            <constraint firstAttribute="trailing" secondItem="yhn-D4-wHX" secondAttribute="trailing" id="oiA-Ed-0gi"/>
+                            <constraint firstAttribute="trailing" secondItem="AjW-dF-bey" secondAttribute="trailing" id="sK2-mz-Hww"/>
+                            <constraint firstAttribute="trailing" secondItem="vrL-nA-IKT" secondAttribute="trailing" id="zS2-GF-uMQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Idb-K9-Gta"/>
+                    <connections>
+                        <outlet property="containerView" destination="vrL-nA-IKT" id="NDV-OE-bgB"/>
+                        <outlet property="sectionSwitcherSegmentedControl" destination="yhn-D4-wHX" id="Q8i-bf-dGT"/>
+                        <segue destination="iaN-R6-p4P" kind="presentation" identifier="footballToSearch" id="u9p-O8-MgY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8h-Dr-1kV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="125.4872563718141"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="qgn-sD-jvR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="iaN-R6-p4P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73p-v4-XSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="125"/>
+        </scene>
+    </scenes>
+</document>

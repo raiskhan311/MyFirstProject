@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nh4-Nb-fsO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Switch League-->
+        <scene sceneID="M7r-6a-hFy">
+            <objects>
+                <tableViewController id="4Oy-S0-BSc" customClass="LeagueSelectorTableViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="j5r-Ub-HLA">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Tcr-Bc-ViA">
+                            <rect key="frame" x="0.0" y="82" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leagueSelectorCell" id="LGZ-aZ-l8a" customClass="LeagueSelectorTableViewCell" customModule="Airstrike" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LGZ-aZ-l8a" id="4aR-wU-Rhm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fl-1C-WUH">
+                                            <rect key="frame" x="24" y="11" width="301" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Fl-1C-WUH" firstAttribute="leading" secondItem="4aR-wU-Rhm" secondAttribute="leadingMargin" constant="16" id="BLp-zL-lNK"/>
+                                        <constraint firstItem="8Fl-1C-WUH" firstAttribute="top" secondItem="4aR-wU-Rhm" secondAttribute="topMargin" constant="3" id="O7P-Q8-gch"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Fl-1C-WUH" secondAttribute="trailing" constant="42" id="R8E-aq-DFV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8Fl-1C-WUH" secondAttribute="bottom" constant="3" id="Vow-xP-aNg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="8Fl-1C-WUH" id="KU2-zr-3HE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Oy-S0-BSc" id="boQ-sB-ngK"/>
+                            <outlet property="delegate" destination="4Oy-S0-BSc" id="rea-Ps-5qj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Switch League" id="WYq-kS-CYM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Zl2-MF-bCv">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="4Oy-S0-BSc" id="JsA-AP-a2U"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Join League" id="sjd-RR-0qr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="joinLeagueButtonAction:" destination="4Oy-S0-BSc" id="sPC-RK-bW1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVD-7w-sii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="189.3553223388306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7iQ-Dl-DJ9">
+            <objects>
+                <navigationController id="nh4-Nb-fsO" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="mwh-tI-0QC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Oy-S0-BSc" kind="relationship" relationship="rootViewController" id="H0m-r2-wYf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oal-dm-a64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98" y="190"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" rowHeight="73" id="lNE-II-HbW" customClass="AddPlayerTableViewCell" customModule="Airstrike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lNE-II-HbW" id="1EU-lN-F8K">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="McP-j6-apB">
+                        <rect key="frame" x="24" y="17" width="38" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="5KQ-Xe-qZD"/>
+                            <constraint firstAttribute="width" constant="38" id="LnD-Vf-eMI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruc-Z8-RUp">
+                        <rect key="frame" x="78" y="17" width="273" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="McP-j6-apB" firstAttribute="centerY" secondItem="1EU-lN-F8K" secondAttribute="centerY" id="5xu-Cf-hND"/>
+                    <constraint firstItem="ruc-Z8-RUp" firstAttribute="centerY" secondItem="McP-j6-apB" secondAttribute="centerY" id="T6F-oF-8dG"/>
+                    <constraint firstItem="ruc-Z8-RUp" firstAttribute="leading" secondItem="McP-j6-apB" secondAttribute="trailing" constant="16" id="Xh3-Ah-p7e"/>
+                    <constraint firstItem="McP-j6-apB" firstAttribute="leading" secondItem="1EU-lN-F8K" secondAttribute="leading" constant="24" id="pKe-q8-lPu"/>
+                    <constraint firstAttribute="trailing" secondItem="ruc-Z8-RUp" secondAttribute="trailing" constant="24" id="qeS-qI-XUZ"/>
+                    <constraint firstItem="ruc-Z8-RUp" firstAttribute="height" secondItem="McP-j6-apB" secondAttribute="height" id="vJo-uV-6rp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="ruc-Z8-RUp" id="3hg-IA-vUn"/>
+                <outlet property="profileImageView" destination="McP-j6-apB" id="EfE-09-ajo"/>
+            </connections>
+            <point key="canvasLocation" x="-74" y="-2"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="genericCell" rowHeight="59" id="2fy-2r-pa3" customClass="GenericTableViewCell" customModule="Airstrike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2fy-2r-pa3" id="0vC-Ul-bmi">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-03-Jtn">
+                        <rect key="frame" x="24" y="19" width="40" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="efg-IB-abw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-1U-YET">
+                        <rect key="frame" x="344" y="23" width="7" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="7" id="eyG-Gk-6O9"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Swq-03-Jtn" firstAttribute="centerY" secondItem="0vC-Ul-bmi" secondAttribute="centerY" id="F9O-Oe-HSy"/>
+                    <constraint firstItem="jeH-1U-YET" firstAttribute="centerY" secondItem="0vC-Ul-bmi" secondAttribute="centerY" id="WGd-Io-wl9"/>
+                    <constraint firstAttribute="trailing" secondItem="jeH-1U-YET" secondAttribute="trailing" constant="24" id="miS-Ex-aaZ"/>
+                    <constraint firstItem="Swq-03-Jtn" firstAttribute="leading" secondItem="0vC-Ul-bmi" secondAttribute="leading" constant="24" id="qg6-gi-6Xn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="disclosureImageView" destination="jeH-1U-YET" id="1yv-EU-KnH"/>
+                <outlet property="titleLabel" destination="Swq-03-Jtn" id="Ouo-a2-j6H"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="-73.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="disclosureIcon" width="7" height="12"/>
+    </resources>
+</document>

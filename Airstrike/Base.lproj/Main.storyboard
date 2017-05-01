@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KEp-z2-v0Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UPU-1h-7YL">
+            <objects>
+                <tabBarController id="KEp-z2-v0Z" customClass="TabBarController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="2Cs-vn-TMc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vs8-yW-uWL" kind="relationship" relationship="viewControllers" id="1nW-Qv-DMA"/>
+                        <segue destination="6DY-3C-ZBm" kind="relationship" relationship="viewControllers" id="rF3-ZU-IyM"/>
+                        <segue destination="KUW-ak-fW3" kind="relationship" relationship="viewControllers" id="E8D-wS-9EK"/>
+                        <segue destination="I35-5t-bHy" kind="relationship" relationship="viewControllers" id="JTH-3K-eoC"/>
+                        <segue destination="7V6-c3-MOS" kind="relationship" relationship="viewControllers" id="FPD-Nv-DcJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgA-UO-3ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="-941"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="T6i-Uz-vkp">
+            <objects>
+                <navigationController title="Schedule" id="6DY-3C-ZBm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TBCalendarIcon" selectedImage="TBCalendarIconSelected" id="npQ-r6-4Ht">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UKi-0G-0Ea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UaU-gG-SV3" kind="relationship" relationship="rootViewController" id="fxK-Yc-xGu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrA-TJ-ecb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="-191"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="k6j-YJ-DKh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calendar" id="UaU-gG-SV3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Qd-pg-XQS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5M-JF-73d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1290" y="283"/>
+        </scene>
+        <!--Football-->
+        <scene sceneID="Qia-0N-4vC">
+            <objects>
+                <navigationController title="Football" id="Vs8-yW-uWL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TBFootballIcon" selectedImage="TBFootballIconSelected" id="g8j-cM-kYY">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cIl-Gh-Xan">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Jq-sc-wjt" kind="relationship" relationship="rootViewController" id="Pkh-h0-VId"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdI-BW-pcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2177" y="-191"/>
+        </scene>
+        <!--Football-->
+        <scene sceneID="ylL-uN-KvX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Football" id="8Jq-sc-wjt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WGK-qb-yNT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pl-p1-XlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2178" y="249"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="nbb-5h-f2m">
+            <objects>
+                <navigationController title="Game" id="KUW-ak-fW3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TBRecordIcon" selectedImage="TBRecordIconSelected" id="v1v-nK-K3h">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jfd-G9-SQc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="H0W-uA-cMn" kind="relationship" relationship="rootViewController" id="B4K-Lp-3zM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYa-hN-jZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-441" y="-191"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="U36-iq-tVZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Record" id="H0W-uA-cMn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2I3-Dp-Njf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khe-EA-onH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="265"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="jai-dv-L1n">
+            <objects>
+                <navigationController title="Profile" id="I35-5t-bHy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TBProfileIcon" selectedImage="TBProfileIconSelected" id="bIp-iI-6Jl">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="dFj-BX-y2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xKY-RE-AA3" kind="relationship" relationship="rootViewController" id="lYS-0W-zfp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XX-Dp-ALO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-191"/>
+        </scene>
+        <!--Team Management-->
+        <scene sceneID="hx1-4K-kWw">
+            <objects>
+                <navigationController id="7V6-c3-MOS" userLabel="Team Management" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TBTeamIcon" selectedImage="TBTeamIconSelected" id="glL-f9-w7Z">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rha-Fb-ABl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vEF-11-5i7" kind="relationship" relationship="rootViewController" id="rD7-P0-xVc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbv-lD-oQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="-191"/>
+        </scene>
+        <!--TeamManagement-->
+        <scene sceneID="ryK-TO-bcr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TeamManagement" id="vEF-11-5i7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2WL-L6-8ax"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ml-uJ-auQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="241"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="AGw-g9-a3f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="xKY-RE-AA3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="khE-KJ-Dks"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cy-1K-AmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TBCalendarIcon" width="18" height="20"/>
+        <image name="TBCalendarIconSelected" width="18" height="20"/>
+        <image name="TBFootballIcon" width="22" height="18"/>
+        <image name="TBFootballIconSelected" width="22" height="18"/>
+        <image name="TBProfileIcon" width="17" height="21"/>
+        <image name="TBProfileIconSelected" width="17" height="20"/>
+        <image name="TBRecordIcon" width="23" height="15"/>
+        <image name="TBRecordIconSelected" width="23" height="15"/>
+        <image name="TBTeamIcon" width="17" height="20"/>
+        <image name="TBTeamIconSelected" width="17" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TyN-iJ-uLN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Team Name-->
+        <scene sceneID="5uF-Hs-Mqz">
+            <objects>
+                <viewController id="TyN-iJ-uLN" customClass="TeamDetailViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8dW-SJ-1r3"/>
+                        <viewControllerLayoutGuide type="bottom" id="jIb-W6-TCu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JxU-qa-xnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYm-mM-z9n">
+                                <rect key="frame" x="0.0" y="20" width="375" height="32"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mln-JM-mza" customClass="CustomSegmentedControl" customModule="Airstrike" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="UOI-Lz-0el"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Scores"/>
+                                            <segment title="Stats"/>
+                                            <segment title="Media"/>
+                                            <segment title="Roster"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentedControlValueChangedAction:" destination="TyN-iJ-uLN" eventType="valueChanged" id="g8K-f3-BIf"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mln-JM-mza" secondAttribute="trailing" id="30c-3M-Njx"/>
+                                    <constraint firstAttribute="height" constant="32" id="Kb1-SE-yV5"/>
+                                    <constraint firstItem="Mln-JM-mza" firstAttribute="top" secondItem="JYm-mM-z9n" secondAttribute="top" id="Ofn-AP-5uk"/>
+                                    <constraint firstItem="Mln-JM-mza" firstAttribute="leading" secondItem="JYm-mM-z9n" secondAttribute="leading" id="iys-Gz-UCf"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l1-pR-d9V">
+                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JYm-mM-z9n" secondAttribute="trailing" id="29a-fL-Asq"/>
+                            <constraint firstItem="JYm-mM-z9n" firstAttribute="leading" secondItem="JxU-qa-xnZ" secondAttribute="leading" id="2DN-dK-yOG"/>
+                            <constraint firstAttribute="trailing" secondItem="6l1-pR-d9V" secondAttribute="trailing" id="H6t-S3-3ST"/>
+                            <constraint firstItem="6l1-pR-d9V" firstAttribute="leading" secondItem="JxU-qa-xnZ" secondAttribute="leading" id="NXW-i2-QZa"/>
+                            <constraint firstItem="6l1-pR-d9V" firstAttribute="top" secondItem="JYm-mM-z9n" secondAttribute="bottom" id="Qca-nC-0ZK"/>
+                            <constraint firstItem="jIb-W6-TCu" firstAttribute="top" secondItem="6l1-pR-d9V" secondAttribute="bottom" id="Vru-xx-d8e"/>
+                            <constraint firstItem="JYm-mM-z9n" firstAttribute="top" secondItem="8dW-SJ-1r3" secondAttribute="bottom" id="ZnC-sx-UbI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Team Name" id="xBr-tT-asS">
+                        <barButtonItem key="leftBarButtonItem" image="reverseDisclosureIcon" id="xmn-uK-EEe">
+                            <connections>
+                                <action selector="backBarButtonAction:" destination="TyN-iJ-uLN" id="nUi-9Q-FFY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="88-88" id="ODC-sW-C9z"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backBarButton" destination="xmn-uK-EEe" id="h4w-t6-pkH"/>
+                        <outlet property="behindSegmentedControlView" destination="JYm-mM-z9n" id="cHc-tu-Il9"/>
+                        <outlet property="containerView" destination="6l1-pR-d9V" id="iNP-i8-yoI"/>
+                        <outlet property="segmentedControl" destination="Mln-JM-mza" id="M6P-X2-zZv"/>
+                        <outlet property="winLossBarButon" destination="ODC-sW-C9z" id="NMK-JK-Kwz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLc-V3-DkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="182.15892053973016"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reverseDisclosureIcon" width="11" height="18"/>
+    </resources>
+</document>

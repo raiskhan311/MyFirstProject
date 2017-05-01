@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Ni-xx-KZp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Awards Table View Controller-->
+        <scene sceneID="NXn-MF-Pvi">
+            <objects>
+                <tableViewController id="3Ni-xx-KZp" customClass="AwardsTableViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="19i-N3-9lW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.92941176470588238" green="0.93333333333333335" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="1EV-sM-nyq">
+                            <rect key="frame" x="0.0" y="88" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="awardCell" rowHeight="60" id="C7N-4O-zcm" customClass="AwardsTableViewCell" customModule="Airstrike" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C7N-4O-zcm" id="HjY-6J-RBh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/30/8888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-2k-yj6">
+                                            <rect key="frame" x="261" y="19.5" width="90" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="zPS-K4-crg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophyIconLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6hu-Wd-UkT">
+                                            <rect key="frame" x="24" y="21" width="18" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="IrL-Xc-cJJ"/>
+                                                <constraint firstAttribute="width" constant="18" id="JF8-U2-Mnm"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="h73-kU-Tyu"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRm-dc-Uag">
+                                            <rect key="frame" x="58" y="20" width="195" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oPr-2k-yj6" secondAttribute="bottom" constant="10.5" id="2SY-RA-vOF"/>
+                                        <constraint firstItem="6hu-Wd-UkT" firstAttribute="centerY" secondItem="HjY-6J-RBh" secondAttribute="centerY" id="9bt-94-gLt"/>
+                                        <constraint firstItem="6hu-Wd-UkT" firstAttribute="leading" secondItem="HjY-6J-RBh" secondAttribute="leadingMargin" constant="16" id="D6x-kC-qWx"/>
+                                        <constraint firstItem="ZRm-dc-Uag" firstAttribute="top" secondItem="HjY-6J-RBh" secondAttribute="topMargin" constant="12" id="EIJ-Oi-Wth"/>
+                                        <constraint firstItem="oPr-2k-yj6" firstAttribute="leading" secondItem="ZRm-dc-Uag" secondAttribute="trailing" constant="8" id="EtY-Ee-OEn"/>
+                                        <constraint firstItem="6hu-Wd-UkT" firstAttribute="leading" secondItem="HjY-6J-RBh" secondAttribute="leading" constant="24" id="Pr7-Rn-fQW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6hu-Wd-UkT" secondAttribute="bottom" constant="12" id="QMD-v6-Uiw"/>
+                                        <constraint firstItem="6hu-Wd-UkT" firstAttribute="top" secondItem="HjY-6J-RBh" secondAttribute="topMargin" constant="13" id="Zc7-CM-iPb"/>
+                                        <constraint firstItem="oPr-2k-yj6" firstAttribute="top" secondItem="HjY-6J-RBh" secondAttribute="topMargin" constant="11.5" id="aBi-pr-AXq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oPr-2k-yj6" secondAttribute="trailing" constant="16" id="dat-xz-3DH"/>
+                                        <constraint firstItem="ZRm-dc-Uag" firstAttribute="leading" secondItem="6hu-Wd-UkT" secondAttribute="trailing" constant="16" id="jIE-sY-5Hg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZRm-dc-Uag" secondAttribute="bottom" constant="10" id="uWW-sL-o1d"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="awardDateLabel" destination="oPr-2k-yj6" id="Rdr-sK-wnG"/>
+                                    <outlet property="awardImageView" destination="9bt-94-gLt" id="chb-vU-Mfc"/>
+                                    <outlet property="awardTitleLabel" destination="ZRm-dc-Uag" id="cBp-ui-KXw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Ni-xx-KZp" id="3pY-WX-0m8"/>
+                            <outlet property="delegate" destination="3Ni-xx-KZp" id="xdk-zl-443"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3a-QC-9zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="-142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trophyIconLarge" width="18" height="19"/>
+    </resources>
+</document>

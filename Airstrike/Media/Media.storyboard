@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YFs-vu-ZZ4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Collection View Controller-->
+        <scene sceneID="ByU-7y-2Ca">
+            <objects>
+                <collectionViewController id="YFs-vu-ZZ4" customClass="MediaCollectionViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jjA-UM-8sy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="1" id="7Jw-Up-lzq">
+                            <size key="itemSize" width="142" height="143"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="dl5-YK-7Jg">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdO-MA-aar">
+                                    <rect key="frame" x="87" y="67" width="200" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="ZlI-lM-sXY"/>
+                                        <constraint firstAttribute="width" constant="200" id="h9i-VL-lKi"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="IdO-MA-aar" firstAttribute="centerX" secondItem="dl5-YK-7Jg" secondAttribute="centerX" id="HAc-2c-lhU"/>
+                                <constraint firstItem="IdO-MA-aar" firstAttribute="top" secondItem="dl5-YK-7Jg" secondAttribute="top" constant="32" id="Li8-ZC-JPG"/>
+                            </constraints>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mediaCollectionViewCell" id="MdQ-a9-wqR" customClass="MediaCollectionViewCell" customModule="Airstrike" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="142" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="142" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IDz-zE-uKy">
+                                            <rect key="frame" x="0.0" y="0.0" width="142" height="143"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IDz-zE-uKy" secondAttribute="trailing" id="HdO-E5-HAw"/>
+                                    <constraint firstItem="IDz-zE-uKy" firstAttribute="top" secondItem="MdQ-a9-wqR" secondAttribute="top" id="OhI-rc-2xL"/>
+                                    <constraint firstAttribute="bottom" secondItem="IDz-zE-uKy" secondAttribute="bottom" id="ZkJ-9E-ZXD"/>
+                                    <constraint firstItem="IDz-zE-uKy" firstAttribute="leading" secondItem="MdQ-a9-wqR" secondAttribute="leading" id="yY0-cA-JRJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaThumbNail" destination="IDz-zE-uKy" id="0Qr-qy-rCD"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YFs-vu-ZZ4" id="6FP-7b-Fe9"/>
+                            <outlet property="delegate" destination="YFs-vu-ZZ4" id="Hpx-Pk-W6f"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="noMediaLabel" destination="IdO-MA-aar" id="Sfe-Hf-KBG"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgp-Tj-m0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>

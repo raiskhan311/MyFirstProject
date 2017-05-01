@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wy8-4C-tp9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Lxu-VS-MxD">
+            <objects>
+                <viewController storyboardIdentifier="StatsCreationVC" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E8n-WZ-Msn" customClass="StatsCreationViewController" customModule="Airstrike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lBi-Hr-7ge"/>
+                        <viewControllerLayoutGuide type="bottom" id="kAQ-Wi-Frv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1qw-8t-IOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2I-NP-jGG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-FS-LqP" customClass="CustomSegmentedControl" customModule="Airstrike" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JkT-x8-8Ee"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" destination="E8n-WZ-Msn" eventType="valueChanged" id="cfa-1f-oGP"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Fza-FS-LqP" secondAttribute="trailing" id="bNR-qa-gT7"/>
+                                    <constraint firstItem="Fza-FS-LqP" firstAttribute="leading" secondItem="T2I-NP-jGG" secondAttribute="leading" id="f7z-BK-S6C"/>
+                                    <constraint firstItem="Fza-FS-LqP" firstAttribute="top" secondItem="T2I-NP-jGG" secondAttribute="top" id="rsS-bp-C0d"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q5u-Va-vgY">
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="UQ6-83-Jl5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="E8n-WZ-Msn" id="wFv-GX-h37"/>
+                                    <outlet property="delegate" destination="E8n-WZ-Msn" id="HuF-dR-VtR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q5u-Va-vgY" firstAttribute="top" secondItem="lBi-Hr-7ge" secondAttribute="bottom" constant="40" id="0p0-NW-FcD"/>
+                            <constraint firstAttribute="trailing" secondItem="T2I-NP-jGG" secondAttribute="trailing" id="762-p5-niz"/>
+                            <constraint firstItem="Q5u-Va-vgY" firstAttribute="leading" secondItem="1qw-8t-IOB" secondAttribute="leading" id="BVp-G4-VcK"/>
+                            <constraint firstItem="T2I-NP-jGG" firstAttribute="leading" secondItem="1qw-8t-IOB" secondAttribute="leading" id="EBF-1n-7Ni"/>
+                            <constraint firstItem="kAQ-Wi-Frv" firstAttribute="top" secondItem="Q5u-Va-vgY" secondAttribute="bottom" id="ZAV-75-SGE"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5u-Va-vgY" secondAttribute="trailing" id="f1z-JS-Bdf"/>
+                            <constraint firstItem="T2I-NP-jGG" firstAttribute="top" secondItem="lBi-Hr-7ge" secondAttribute="bottom" id="gwp-Fh-5xQ"/>
+                            <constraint firstItem="Q5u-Va-vgY" firstAttribute="top" secondItem="T2I-NP-jGG" secondAttribute="bottom" id="thH-J3-g64"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="9tf-V1-wDZ">
+                        <leftBarButtonItems>
+                            <barButtonItem image="reverseDisclosureIcon" id="Ema-5k-x6V">
+                                <color key="tintColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="E8n-WZ-Msn" id="Sgd-kd-YJI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="cancel" id="SX7-eY-fme">
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="0.80133179530201337" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="E8n-WZ-Msn" id="udZ-v0-17V"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backButton" destination="Ema-5k-x6V" id="pKS-w6-hwJ"/>
+                        <outlet property="cancelButton" destination="SX7-eY-fme" id="7Z7-UM-Dfq"/>
+                        <outlet property="navItem" destination="9tf-V1-wDZ" id="qis-ve-d8Q"/>
+                        <outlet property="segmentedControl" destination="Fza-FS-LqP" id="MVC-OY-Qeu"/>
+                        <outlet property="tableView" destination="Q5u-Va-vgY" id="EpQ-cr-bGs"/>
+                        <outlet property="tableViewTopConstraint" destination="0p0-NW-FcD" id="Utu-Eh-uaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdj-4R-bem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8" y="14.842578710644679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7mj-lk-T2M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wy8-4C-tp9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Fw-dI-Ob3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E8n-WZ-Msn" kind="relationship" relationship="rootViewController" id="VuA-PG-Wci"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luP-Tb-j33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="14.842578710644679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reverseDisclosureIcon" width="11" height="18"/>
+    </resources>
+</document>

@@ -1,0 +1,4 @@
+github "Mozharovsky/CVCalendar" "1.4.1"
+github "ashleymills/Reachability.swift" "v3"
+github "stephencelis/SQLite.swift" "0.11.2"
+github "stripe/stripe-ios" "v9.4.0"

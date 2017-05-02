@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fyZ-nx-8iE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fyZ-nx-8iE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,11 +67,12 @@
                         <outlet property="containerView" destination="vrL-nA-IKT" id="NDV-OE-bgB"/>
                         <outlet property="sectionSwitcherSegmentedControl" destination="yhn-D4-wHX" id="Q8i-bf-dGT"/>
                         <segue destination="iaN-R6-p4P" kind="presentation" identifier="footballToSearch" id="u9p-O8-MgY"/>
+                        <segue destination="OYb-nz-SMt" kind="presentation" identifier="DocumentsListTableViewController" id="W6Z-VT-oFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8h-Dr-1kV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125.59999999999999" y="125.4872563718141"/>
+            <point key="canvasLocation" x="281" y="119"/>
         </scene>
         <!--Search-->
         <scene sceneID="qgn-sD-jvR">
@@ -79,7 +80,15 @@
                 <viewControllerPlaceholder storyboardName="Search" id="iaN-R6-p4P" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73p-v4-XSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="125"/>
+            <point key="canvasLocation" x="932" y="105"/>
+        </scene>
+        <!--Documents-->
+        <scene sceneID="DPp-t9-02E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Documents" id="OYb-nz-SMt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKb-5g-BKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="148"/>
         </scene>
     </scenes>
 </document>

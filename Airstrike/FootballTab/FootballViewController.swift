@@ -75,14 +75,17 @@ extension FootballViewController {
             self.navigationItem.setLeftBarButton(signUpBarButton, animated: false)
         }
         self.navigationItem.leftBarButtonItem?.tintColor = Colors.darkTextColor
+        let addBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "AddDocIcon"),style: .plain,target: self,action:#selector(addDocumentsBarButtonAction(sender:)))
+        
+        self.navigationItem.setRightBarButton(addBarButton, animated: false)
         // **** Uncomment this to add the notificationIcon to the notification bar  ****
 //        let notificationBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "notificationIcon"), style: .plain, target: self, action: #selector(notificationBarButtonAction(sender:)))
 //        self.navigationItem.setLeftBarButton(notificationBarButton, animated: false)
-//        self.navigationItem.leftBarButtonItem?.tintColor = Colors.darkTextColor
+        self.navigationItem.leftBarButtonItem?.tintColor = Colors.darkTextColor
         
-//        let searchBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "searchIcon"), style: .plain, target: self, action: #selector(searchBarButtonAction(sender:)))
-//        self.navigationItem.setRightBarButton(searchBarButton, animated: false)
-//        self.navigationItem.rightBarButtonItem?.tintColor = Colors.darkTextColor
+        let searchBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "searchIcon"), style: .plain, target: self, action: #selector(searchBarButtonAction(sender:)))
+        self.navigationItem.setLeftBarButton(searchBarButton, animated: false)
+        self.navigationItem.rightBarButtonItem?.tintColor = Colors.darkTextColor
     }
     
     fileprivate func setupColors() {
@@ -125,6 +128,9 @@ extension FootballViewController {
         
     }
     
+    func addDocumentsBarButtonAction(sender: UIBarButtonItem){
+        self.performSegue(withIdentifier: "DocumentsListTableViewController", sender: nil)
+    }
     func searchBarButtonAction(sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "footballToSearch", sender: nil)
     }

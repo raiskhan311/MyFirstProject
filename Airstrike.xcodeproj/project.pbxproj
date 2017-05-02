@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AB2C941EB86C69002531B0 /* Documents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AB2C931EB86C69002531B0 /* Documents.storyboard */; };
+		18AB2C981EB89648002531B0 /* DocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB2C971EB89648002531B0 /* DocumentListViewController.swift */; };
 		18B3EE2A1EB76C4F0041F259 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B3EE291EB76C4F0041F259 /* GoogleService-Info.plist */; };
 		1C69919E1DFF2BD900A184EB /* LoginHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69919D1DFF2BD900A184EB /* LoginHelperFunctions.swift */; };
 		1C6991A11DFF2D7800A184EB /* ServiceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6991A01DFF2D7800A184EB /* ServiceConnector.swift */; };
@@ -234,6 +236,8 @@
 
 /* Begin PBXFileReference section */
 		04BCC6DABA5105DA80826668 /* Pods_AirstrikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirstrikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18AB2C931EB86C69002531B0 /* Documents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Documents.storyboard; sourceTree = "<group>"; };
+		18AB2C971EB89648002531B0 /* DocumentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentListViewController.swift; sourceTree = "<group>"; };
 		18B3EE291EB76C4F0041F259 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C69919D1DFF2BD900A184EB /* LoginHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelperFunctions.swift; sourceTree = "<group>"; };
 		1C6991A01DFF2D7800A184EB /* ServiceConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConnector.swift; sourceTree = "<group>"; };
@@ -466,6 +470,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AB2C921EB86C19002531B0 /* Documents list */ = {
+			isa = PBXGroup;
+			children = (
+				18AB2C931EB86C69002531B0 /* Documents.storyboard */,
+				18AB2C971EB89648002531B0 /* DocumentListViewController.swift */,
+			);
+			name = "Documents list";
+			sourceTree = "<group>";
+		};
 		1C69919F1DFF2D3900A184EB /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +618,7 @@
 		1F6AD8F21DDFBF8500A6EC6E /* Airstrike */ = {
 			isa = PBXGroup;
 			children = (
+				18AB2C921EB86C19002531B0 /* Documents list */,
 				1F6AD9221DDFC78A00A6EC6E /* CalendarTab */,
 				1CCEC94C1DF8970000C6AEE5 /* Colors */,
 				1F7E6E731DF60DB80017F159 /* CustomControls */,
@@ -1205,6 +1219,7 @@
 				BABA64E11E0B424E00985FAB /* FeedCollectionViewCell.xib in Resources */,
 				BABBDBB21E1C7C4300341E02 /* GameDetail.storyboard in Resources */,
 				1CC5FBA91E0DAC0B00FCB8C3 /* RosterHeaderCell.xib in Resources */,
+				18AB2C941EB86C69002531B0 /* Documents.storyboard in Resources */,
 				BABBDBAD1E1B5E1C00341E02 /* NumberInputCell.xib in Resources */,
 				BA4399351E5607EB00E887FC /* SignUpType.storyboard in Resources */,
 				1F7E6E6A1DF609D70017F159 /* Record.storyboard in Resources */,
@@ -1524,6 +1539,7 @@
 				BA093A211E32E6A600E80DF7 /* ManageTeamRosterViewModel.swift in Sources */,
 				BA3F23C71E0DA79B002A9511 /* CalendarGamesViewModel.swift in Sources */,
 				1F5D53871E23FBD400B41B78 /* DAOCachedMedia.swift in Sources */,
+				18AB2C981EB89648002531B0 /* DocumentListViewController.swift in Sources */,
 				BA0130091E454FEC0069C389 /* UserRoleEnum.swift in Sources */,
 				1F6AD8F41DDFBF8500A6EC6E /* AppDelegate.swift in Sources */,
 				1CC5FBA31E0D9F7E00FCB8C3 /* RosterViewModel.swift in Sources */,

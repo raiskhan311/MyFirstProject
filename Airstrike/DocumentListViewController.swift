@@ -14,7 +14,8 @@ class DocumentListViewController: UIViewController, UITableViewDataSource,UITabB
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        get_data_from_url()
+//        get_data_from_url()
+        getFromJson()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,46 @@ class DocumentListViewController: UIViewController, UITableViewDataSource,UITabB
     @IBAction func btn_CloseDocumentList(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    var TableData:Array< String > = Array < String >()
+    
+    func getFromJson(){
+        let url = NSURL(string: "http://35.164.49.74/api/document_upload.php")
+        let request = NSMutableURLRequest(url: url! as URL)
+        let task = URLSession.shared.dataTask(with: request as URLRequest){ data,response,error in
+            guard error == nil && data != nil else
+            {
+                print("Error:", error as Any)
+                return
+            }
+            let httpStatus = response as? HTTPURLResponse
+            if httpStatus?.statusCode == 200
+            {
+              if data?.count != 0
+              {
+                let responseString = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary
+                let time = responseString["current_time"]
+                print(String(describing:time))
+                let posts = responseString["post"] as? [AnyObject]
+                for post in posts!
+                {
+                    let text = post["text"]as! String
+                    print(text)
+                    DispatchQueue.main.async {
+                        //table.reload
+                        //label.text ...etc
+                    }
+                }
+                }
+                else
+              {
+                print("No data got from url!")
+                }
+            }
+            else{
+                print("error httpStatus code is: ",httpStatus?.statusCode as Any)
+            }
+        }
+        task.resume()
+    }
     
     // Mark: - TableView DataSource
     
@@ -46,7 +86,7 @@ class DocumentListViewController: UIViewController, UITableViewDataSource,UITabB
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableData.count
+        return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
@@ -55,7 +95,7 @@ class DocumentListViewController: UIViewController, UITableViewDataSource,UITabB
     var league_id:[String] = []
     var document_name:[String] = []
     var created_date:[String] = []
-    
+ /*
     //create function
     
     func get_data_from_url(){
@@ -72,7 +112,7 @@ class DocumentListViewController: UIViewController, UITableViewDataSource,UITabB
             }
         }
         task.resume()
-    }
+    }   */
     
     /*
     // MARK: - Navigation
